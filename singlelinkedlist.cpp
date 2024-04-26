@@ -134,14 +134,13 @@ void searchData() {
 
 }
 
-
-int main() {
+int main()
+{
     int pilihan;
     do
     {
         try
         {
-           
             cout << "1. Tambah Data" << endl;
             cout << "2. Hapus Data" << endl;
             cout << "3. Tampilkan Data" << endl;
@@ -151,33 +150,31 @@ int main() {
             cin >> pilihan;
             switch (pilihan)
             {
-                case 1:
-                    addNode();
-                    cout << "Data Berhasil Ditambahkan" << endl;
+            case 1:
+                addNode();
+                cout << "Data Berhasil Ditambahkan" << endl;
+                system("pause");
+                system("cls");
+                break;
+            case 2:
+                if (listEmpty())
+                {
+                    cout << "List Kosong" << endl;
                     system("pause");
                     system("cls");
                     break;
-                case 2:
-                    if (listEmpty())
-                    {
-                        cout << "List kosong" << endl;
-                        system("pause");
-                        system("cls");
-                        break;
-                    }
-
+                }
+                int nim;
+                cout << "Masukan NIM: ";
+                cin >> nim;
+                if (deleteNode(nim)) {
+                    cout << "nim" << " berhasil dihapus" << endl;
+                    system("pause");
+                    system("cls");
+                }
                 
-
-            }
-
-        }
-        
-    }
-   
-    
-   
-    
 }
+
 
 
 
